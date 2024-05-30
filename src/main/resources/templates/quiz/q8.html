@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+[[${list}]]
+<table border=1>
+	<tr>
+		<td>성</td>
+		<td>이름</td>
+		<td>나이</td>
+		<td>주소</td>
+		<td>인천 거주 여부</td>
+	</tr>
+	
+	<th:block th:each="dto : ${list}">
+		<tr>
+			<td>[[${#strings.substring(dto.name, 0, 1)}]]</td>
+			<td>[[${#strings.substring(dto.name, 1, 3)}]]</td>
+			<td>[[${dto.age}]]</td>
+			<td>[[${dto.address}]]</td>
+			<td>[[${#strings.contains(dto.address, '인천') }? 거주 : 비거주 ]]</td>
+		</tr>
+	</th:block>
+</table>
+
+</body>
+</html>

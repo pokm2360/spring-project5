@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+
+	<h1>짝수만 출력</h1>
+	
+	<th:block th:each="num :${arr}">
+		 <span th:if="${num%2 == 0}" th:text="${num}"></span> 
+	</th:block>
+
+	
+</body>
+</html>
