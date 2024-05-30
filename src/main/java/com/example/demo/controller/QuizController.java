@@ -64,7 +64,7 @@ public class QuizController {
 		list.add(new PersonDTO("둘리", 20, "인천 구월동"));
 		list.add(new PersonDTO("또치", 30, "서울 신림동"));
 		list.add(new PersonDTO("도우너", 40, "부산 문래동"));
-		model.addAttribute("dto", list);
+		model.addAttribute("list", list);
 	}
 
 	@GetMapping("/q7")
